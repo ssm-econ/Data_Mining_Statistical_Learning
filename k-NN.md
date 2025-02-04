@@ -40,11 +40,13 @@ $$
 \hat{y} = \frac{\sum_{i=1}^{k} w_i \, y_i}{\sum_{i=1}^{k} w_i}
 $$
 
-Alternative functions can be used (e.g., $\frac{1}{d_i^2}$ or a Gaussian kernel $w_i = \exp\left(-\frac{d_i^2}{2\sigma^2}\right)$).  
+Alternative functions can be used (e.g., $w_i=\frac{1}{d_i^2}$ or a Gaussian kernel $$
+w_i = \exp\left(-\frac{d_i^2}{2\sigma^2}\right)
+$$.  
 **Note:** If any $d_i$ is zero (i.e., the query point exactly matches a training point), you must handle this case appropriately—either by returning the corresponding target value directly or by adding a small constant to avoid division by zero.
 
 ## Graphical Example
-![knn_gif](artifacts/knn_animation.gif)
+![ ](https://github.com/ssm-econ/Data_Mining_Statistical_Learning/blob/main/artifacts/knn_animation.gif)
 Imagine a scatter plot where:
 
 - The **x-axis** represents the feature.
